@@ -6,6 +6,7 @@ import cz.davidkurzica.domain.line.line
 import cz.davidkurzica.domain.packet.packet
 import cz.davidkurzica.domain.route.route
 import cz.davidkurzica.domain.routestop.routeStop
+import cz.davidkurzica.domain.routing.routing
 import cz.davidkurzica.domain.rule.rule
 import cz.davidkurzica.domain.stop.stop
 import io.ktor.server.application.*
@@ -22,5 +23,6 @@ fun Application.configureRouting() {
         route()
         routeStop()
         rule()
+        routing()
     }
 }

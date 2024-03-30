@@ -7,6 +7,7 @@ import cz.davidkurzica.domain.line.LineService
 import cz.davidkurzica.domain.packet.PacketService
 import cz.davidkurzica.domain.route.RouteService
 import cz.davidkurzica.domain.routestop.RouteStopService
+import cz.davidkurzica.domain.routing.RoutingService
 import cz.davidkurzica.domain.rule.RuleService
 import cz.davidkurzica.domain.stop.StopService
 import org.koin.dsl.module
@@ -21,4 +22,5 @@ val serviceModule = module {
     single { RouteService() }
     single { RouteStopService() }
     single { RuleService() }
+    single { RoutingService(get(), get(), get())}
 }
